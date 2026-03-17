@@ -24,7 +24,12 @@ export default function App() {
   }, []);
 
   if (!session) return <LoginForm />;
-  if (session.user.email !== ADMIN_EMAIL) return <UnauthorizedView />;
+  
+  // Replace your old line with this:
+if (!ADMIN_EMAIL.includes(session.user.email)) {
+  return <UnauthorizedView />;
+}
+  
 
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900">
