@@ -1,6 +1,7 @@
 import { Hash } from 'lucide-react';
 import { EID_CARDS } from '../../lib/eid-cards';
 import { STAMPS } from '../../lib/stamps';
+import { ImageIcon } from 'lucide-react';
 
 export default function RankList({ title, icon, items, type }) {
   const getAssetImage = (id) => {
